@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BurracoClick</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#0b6b3a;
+}
+
+.container{
+    max-width:450px;
+    margin:40px auto;
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+h1{
+    color:#0b6b3a;
+}
+
+input{
+    width:90%;
+    padding:15px;
+    font-size:20px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+button{
+    margin-top:25px;
+    width:95%;
+    padding:18px;
+    font-size:22px;
+    background:#25D366;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎲 BURRACO CLICK</h1>
+
+<h2>Iscriviti al Torneo</h2>
+
+<input id="nome" placeholder="Nome e Cognome">
+
+<button onclick="iscriviti()">
+ISCRIVIMI
+</button>
+
+</div>
+
+<script>
+
+function iscriviti(){
+
+let nome=document.getElementById("nome").value.trim();
+
+if(nome==""){
+alert("Inserisci Nome e Cognome");
+return;
+}
+
+if(nome.split(" ").length<2){
+alert("Inserisci Nome e Cognome completo");
+return;
+}
+
+if(!confirm("Confermi l'iscrizione?\n\n"+nome)){
+return;
+}
+
+// <<< QUI INSERIREMO IL TUO NUMERO >>>
+let numero="39XXXXXXXXXX";
+
+let testo=
+"🎲 ISCRIZIONE TORNEO DI BURRACO\n\n"+
+nome;
+
+window.location.href=
+"https://wa.me/"+numero+
+"?text="+encodeURIComponent(testo);
+
+}
+
+</script>
+
+</body>
+</html>
