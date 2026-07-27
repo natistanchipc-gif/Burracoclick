@@ -66,7 +66,16 @@ ISCRIVIMI
 </div>
 
 <script>
-
+// Controlla se le iscrizioni sono aperte
+if (localStorage.getItem("iscrizioni") === "chiuse") {
+    document.body.innerHTML = `
+        <div style="font-family:Arial;text-align:center;padding:60px;">
+            <h1 style="color:red;">⛔ ISCRIZIONI CHIUSE</h1>
+            <p>Le iscrizioni a questo torneo sono terminate.</p>
+            <p>Ti aspettiamo al prossimo torneo!</p>
+        </div>
+    `;
+}
 function iscriviti(){
 
 let nome=document.getElementById("nome").value.trim();
