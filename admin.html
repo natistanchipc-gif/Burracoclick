@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Amministratore BurracoClick</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0b6b3a;
+margin:0;
+}
+
+.container{
+max-width:500px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+h1{
+color:#0b6b3a;
+}
+
+button{
+width:100%;
+padding:18px;
+font-size:22px;
+margin:12px 0;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.apri{
+background:#28a745;
+color:white;
+}
+
+.chiudi{
+background:#dc3545;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔒 AREA AMMINISTRATORE</h1>
+
+<h2>🎲 BurracoClick</h2>
+
+<button class="apri" onclick="apriIscrizioni()">
+🟢 APRI ISCRIZIONI
+</button>
+
+<button class="chiudi" onclick="chiudiIscrizioni()">
+🔴 CHIUDI ISCRIZIONI
+</button>
+
+</div>
+
+<script>
+
+function apriIscrizioni(){
+
+let testo=
+"🎲 CLUB INTERNAZIONALE DEI NATI STANCHI\n\n"+
+"Sono aperte le iscrizioni al Torneo di Burraco.\n\n"+
+"Per iscriverti clicca sul link:\n\n"+
+"https://natistanchipc-gif.github.io/Burracoclick/\n\n"+
+"Vi aspettiamo!";
+
+window.open(
+"https://wa.me/?text="+encodeURIComponent(testo),
+"_blank"
+);
+
+}
+
+function chiudiIscrizioni(){
+
+alert("Funzione disponibile nella prossima versione.");
+
+}
+
+</script>
+
+</body>
+
+</html>
