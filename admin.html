@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,43 +10,43 @@
 <style>
 
 body{
-font-family:Arial;
-background:#0b6b3a;
-margin:0;
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#0b6b3a;
 }
 
 .container{
-max-width:500px;
-margin:40px auto;
-background:white;
-padding:30px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 0 20px rgba(0,0,0,.3);
+    max-width:500px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
 }
 
 h1{
-color:#0b6b3a;
+    color:#0b6b3a;
 }
 
 button{
-width:100%;
-padding:18px;
-font-size:22px;
-margin:12px 0;
-border:none;
-border-radius:10px;
-cursor:pointer;
+    width:100%;
+    padding:18px;
+    font-size:22px;
+    margin:15px 0;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
 }
 
 .apri{
-background:#28a745;
-color:white;
+    background:#28a745;
+    color:white;
 }
 
 .chiudi{
-background:#dc3545;
-color:white;
+    background:#dc3545;
+    color:white;
 }
 
 </style>
@@ -62,17 +62,13 @@ color:white;
 <h2>🎲 BurracoClick</h2>
 
 <button class="apri" onclick="apriIscrizioni()">
- 
-  🟢 APRI ISCRIZIONI
+🟢 APRI ISCRIZIONI
 </button>
 
-function chiudiIscrizioni(){
+<button class="chiudi" onclick="chiudiIscrizioni()">
+🔴 CHIUDI ISCRIZIONI
+</button>
 
-    localStorage.setItem("iscrizioni","chiuse");
-
-    alert("Le iscrizioni sono state chiuse.");
-
-}
 </div>
 
 <script>
@@ -81,31 +77,30 @@ function apriIscrizioni(){
 
     localStorage.setItem("iscrizioni","aperte");
 
-    // ... resto del codice ...
-}
-
-let testo=
+    let testo =
 "🎲 CLUB INTERNAZIONALE DEI NATI STANCHI\n\n"+
 "Sono aperte le iscrizioni al Torneo di Burraco.\n\n"+
 "Per iscriverti clicca sul link:\n\n"+
 "https://natistanchipc-gif.github.io/Burracoclick/\n\n"+
 "Vi aspettiamo!";
 
-window.open(
-"https://wa.me/?text="+encodeURIComponent(testo),
-"_blank"
-);
+    window.open(
+        "https://wa.me/?text="+encodeURIComponent(testo),
+        "_blank"
+    );
 
+    alert("Iscrizioni aperte.");
 }
 
 function chiudiIscrizioni(){
 
-alert("Funzione disponibile nella prossima versione.");
+    localStorage.setItem("iscrizioni","chiuse");
+
+    alert("Iscrizioni chiuse.");
 
 }
 
 </script>
 
 </body>
-
 </html>
