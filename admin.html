@@ -62,12 +62,18 @@ color:white;
 <h2>🎲 BurracoClick</h2>
 
 <button class="apri" onclick="apriIscrizioni()">
-🟢 APRI ISCRIZIONI
+
+  localStorage.setItem("iscrizioni","aperte");
+  🟢 APRI ISCRIZIONI
 </button>
 
-<button class="chiudi" onclick="chiudiIscrizioni()">
-🔴 CHIUDI ISCRIZIONI
-</button>
+function chiudiIscrizioni(){
+
+    localStorage.setItem("iscrizioni","chiuse");
+
+    alert("Le iscrizioni sono state chiuse.");
+
+}
 
 </div>
 
